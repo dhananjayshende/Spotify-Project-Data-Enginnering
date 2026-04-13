@@ -1,5 +1,5 @@
 {
-	"name": "last_cdc",
+	"name": "last_cdc_json",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
