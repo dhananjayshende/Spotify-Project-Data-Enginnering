@@ -133,14 +133,9 @@
 			{
 				"name": "update_last_cdc",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "SQL db to data lake",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -223,7 +218,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "SELECT MAX(@{pipeline().parameters.cdc_col}) as cdc_max FROM s@{pipeline().parameters.schema}.@{pipeline().parameters.table}",
+								"value": "SELECT MAX(@{pipeline().parameters.cdc_col}) as cdc_max FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}",
 								"type": "Expression"
 							}
 						}
