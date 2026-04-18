@@ -309,8 +309,7 @@
 				"defaultValue": "dbo"
 			},
 			"table": {
-				"type": "string",
-				"defaultValue": "DimUser"
+				"type": "string"
 			},
 			"cdc_col": {
 				"type": "string",
