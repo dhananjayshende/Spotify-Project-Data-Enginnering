@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "Incrimental_loop",
 	"properties": {
 		"activities": [
 			{
@@ -63,7 +63,7 @@
 				"type": "IfCondition",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "check_any_data_after_mention_cdc",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -261,7 +261,7 @@
 				}
 			},
 			{
-				"name": "Lookup1",
+				"name": "check_any_data_after_mention_cdc",
 				"type": "Lookup",
 				"dependsOn": [
 					{
