@@ -72,7 +72,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greater(activity('Lookup1').output.count, 0)",
+						"value": "@greater(activity('check_any_data_after_mention_cdc').output.count, 0)",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
